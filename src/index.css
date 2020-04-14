@@ -1,0 +1,94 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #d9dbdb;
+}
+header {
+  background:#255466;
+  height: 100px;
+}
+h1 {
+  margin: 0;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+button:focus {
+  outline: thin;
+}
+style:focus {
+  outline: thin;
+}
+.container {
+  display: flex;
+  overflow: hidden;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.piano {
+  background: #e35f80;
+  border: 5px solid black;
+}
+
+.pianoHeader {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+
+.pianoHeader button {
+  border: 1px solid black;
+}
+
+.pianoHeader button:hover {
+  border: 1px solid black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.notes {
+  display: flex;
+  font-size: small;
+  border-top: 2px solid black;
+}
+
+.key {
+  text-decoration: solid;
+  text-align: center;
+  line-height: calc(var(--keyHeight) * 1.8);
+  height: var(--keyHeight);
+  width: var(--width);
+}
+
+.white {
+  --width: 39px;
+  --keyHeight: calc(var(--width) * 8);
+  --bgcolor: rgb(233, 242, 245);
+  border: 1px solid black;
+  background: var(--bgcolor);
+}
+
+.black {
+  --width: 31px;
+  --keyHeight: calc(var(--width) * 6);
+  --bgcolor: #404040;
+  border: 1px solid black;
+  margin: 0 calc(var(--width) / -2);
+  z-index: 1;
+  color: rgb(231, 231, 231);
+  background: var(--bgcolor);
+}
+
+.scale {
+  background: linear-gradient(var(--bgcolor) 70%, #50a3a3);
+  background-blend-mode: screen;
+}
+
+.highlight {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
