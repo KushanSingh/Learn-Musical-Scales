@@ -43,7 +43,10 @@ class Notes extends React.Component {
   } 
   componentDidMount() {
     WebMidi.enable(function (err) {
-      if (err) console.log('Error could not load')
+      if (err) {
+        console.log('Error could not load')
+        return
+      }
       
       console.log('Enabled')
       // Check your midi instrument's name with the command: console.log(WebMidi.inputs)
